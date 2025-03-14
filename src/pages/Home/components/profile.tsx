@@ -104,7 +104,7 @@ import {
     return (
       <Stack p={2} justify={"flex-end"} direction={"row"} align={"center"}>
         <Icon as={TbArrowWaveLeftDown} h={8} w={8} />
-        <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} fontWeight={"bold"}>
+        <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} fontWeight={"bold"} fontFamily={"Short Stack"}>
           Checkout the social Profiles 🚀🚀
         </Text>
       </Stack>
