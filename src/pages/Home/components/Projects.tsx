@@ -178,7 +178,7 @@ const Pill = ({ children }: { children: string }) => {
 const TryDraggingMe = () => {
     return (
       <Stack p={2} justify={"flex-start"} direction={"row"} align={"left"}>
-        <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} fontWeight={"bold"}>
+        <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} fontWeight={"bold"} fontFamily={"Short Stack"}>
         👨‍💻👨‍💻 Checking Out This Project ? Buckle Up !!!
         </Text>
         <Icon as={TbArrowWaveRightDown} h={12} w={12} />
