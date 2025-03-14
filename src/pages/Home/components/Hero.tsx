@@ -103,6 +103,8 @@ export const Hero = () => {
           rowGap={2}
           columnGap={2}
         >
+         <TryDraggingMe />
+
           {me.social.map((social) => (
             <Social
               key={social.name}
@@ -177,6 +179,22 @@ const Social = ({
         </Text>
       </Stack>
     </ChakraBox>
+  );
+};
+
+const TryDraggingMe = () => {
+  return (
+    <Stack
+      p={2}
+      justify={"flex-end"}
+      direction={"row"}
+      align={"center"}
+    >
+      <Icon as={TbArrowWaveLeftDown} h={12} w={12} />
+      <Text fontSize={"xl"} fontWeight={"bold"} fontFamily={"Short Stack"}>
+        Let's Connnect !!!
+      </Text>
+    </Stack>
   );
 };
 
