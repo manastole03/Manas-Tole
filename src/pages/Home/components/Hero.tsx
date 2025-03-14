@@ -13,6 +13,7 @@ import { isValidMotionProp, motion } from "framer-motion";
 import ReactGA from "react-ga4";
 import { IconType } from "react-icons";
 import { me } from "../../../me";
+import { TbArrowWaveLeftUp } from "react-icons/tb";
 
 export const Hero = () => {
   const variants = {
@@ -24,7 +25,7 @@ export const Hero = () => {
     <Stack
       id={"home"}
       w={"full"}
-      height={{ base: "100%", md: "80vh" }}
+      height={{ base: "100%", md: "84vh" }}
       spacing={0}
       justifyContent={"center"}
       alignItems={"center"}
@@ -96,6 +97,8 @@ export const Hero = () => {
             {me.tagline}
           </Text>
         </Stack>
+      
+
         <Stack
           direction={"row"}
           spacing={0}
@@ -103,8 +106,6 @@ export const Hero = () => {
           rowGap={2}
           columnGap={2}
         >
-         <TryDraggingMe />
-
           {me.social.map((social) => (
             <Social
               key={social.name}
@@ -115,10 +116,12 @@ export const Hero = () => {
             />
           ))}
         </Stack>
+        <TryDraggingMe />
       </Stack>
     </Stack>
   );
 };
+
 
 const Social = ({
   name,
@@ -173,6 +176,7 @@ const Social = ({
         tabIndex={0}
         onClick={onClick}
       >
+
         <Icon as={icon} />
         <Text fontWeight={"bold"} fontSize={"lg"}>
           {name}
@@ -186,13 +190,14 @@ const TryDraggingMe = () => {
   return (
     <Stack
       p={2}
-      justify={"flex-end"}
-      direction={"row"}
-      align={"center"}
+      justifyContent="flex-start"
+      direction="row"
+      alignItems="flex-end"
+      style={{ marginLeft: "460px" , marginTop:"-35px"}}
     >
-      <Icon as={TbArrowWaveLeftDown} h={12} w={12} />
-      <Text fontSize={"xl"} fontWeight={"bold"} fontFamily={"Short Stack"}>
-        Let's Connnect !!!
+      <Icon as={TbArrowWaveLeftUp} h={9} w={9} />
+      <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} fontWeight={"bold"} fontFamily={"Short Stack"}>
+      I’m always up for a great conversation! 💡💻
       </Text>
     </Stack>
   );
