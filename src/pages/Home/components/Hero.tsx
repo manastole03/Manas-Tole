@@ -193,15 +193,18 @@ const TryDraggingMe = () => {
       justifyContent="flex-start"
       direction="row"
       alignItems="flex-end"
-      style={{ marginLeft: "460px" , marginTop:"-35px"}}
+      ml={{ base: "20px", md: "100px", lg: "460px" }} // Responsive margin-left
+      mt={{ base: "-20px", md: "-15px", lg: "-35px" }} // Responsive margin-top
     >
-      <Icon as={TbArrowWaveLeftUp} h={9} w={9} />
-      <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} fontWeight={"bold"} fontFamily={"Short Stack"}>
-      I’m always up for a great conversation! 💡💻
+      <Icon as={TbArrowWaveLeftUp} h={{ base: 6, md: 8, lg: 9 }} w={{ base: 6, md: 8, lg: 9 }} />
+      <Text fontSize={{ base: "sm", md: "md", lg: "xl" }} fontWeight="bold" fontFamily="Short Stack">
+      Always up for a great chat! 💡💻
       </Text>
     </Stack>
   );
 };
+
+
 
 // Analytics (ReactGA4)
 const trackSocial = (name: string) => {
